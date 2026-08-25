@@ -1,6 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model EmprestimosModel
 @{
     ViewData["title"] = "Cadastrar Empréstimo";
 }
@@ -15,17 +13,20 @@
 
     <div class="mb-3">
         <label for="Recebedor" class="form-label text-light">Recebedor:</label>
-        <input type="text" class="form-control" id="Recebedor" placeholder="Quem está recebendo o livro?">
+        <input type="text" class="form-control" asp-for="Recebedor" id="Recebedor" placeholder="Quem está recebendo o livro?">
+        <span class="text-danger" asp-validation-for="Recebedor"></span>
     </div>
 
     <div class="mb-3">
         <label for="Fornecedor" class="form-label text-light ">Fornecedor:</label>
-        <input type="text" class="form-control" id="Fornecedor" placeholder="Quem está emprestando o livro?">
+        <input type="text" class="form-control" asp-for="Forcenedor" id="Fornecedor" placeholder="Quem está emprestando o livro?">
+        <span class="text-danger" asp-validation-for="Forcenedor"></span>
     </div>
 
     <div class="mb-3">
         <label for="Livro" class="form-label text-light">Livro:</label>
-        <input type="text" class="form-control" id="Livro" placeholder="Qual o nome do livro?">
+        <input type="text" class="form-control" asp-for="LivroEmprestado" id="Livro" placeholder="Qual o nome do livro?">
+        <span class="text-danger" asp-validation-for="LivroEmprestado"></span>
     </div>
 
     <div class="d-flex gap-5 mt-5">
